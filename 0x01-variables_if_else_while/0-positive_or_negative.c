@@ -3,9 +3,10 @@
 #include <stdio.h>
 
 /*
- * file name 0-positivee_or_negative.c
- * main - checked the value of n
- * return always 0
+ *
+ * main - Entry point.
+ **
+ * Description: the program check for n value.
  */
 int main(void)
 {
