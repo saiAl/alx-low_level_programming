@@ -1,8 +1,10 @@
 #include<stdio.h>
 
-/*
+/**
+ * main - function that print a string to stdout
+ * Return: Always 0.
  *
- * */
+ */
 
 int main(void)
 {
