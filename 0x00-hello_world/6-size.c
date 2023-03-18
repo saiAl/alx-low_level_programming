@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/*
+/**
  * main - function that print the sizes of intergal types.
  * Return: Always 0.
  *

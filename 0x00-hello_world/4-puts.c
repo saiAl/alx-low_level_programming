@@ -1,7 +1,7 @@
 #include<stdio.h>
 
-/*
- * *main - function that print string of character to stdout
+/**
+ * main - function that print string of character to stdout
  * Return: Always 0.
  */
 
