@@ -5,8 +5,10 @@
 /*
  *
  * main - Entry point.
- **
+ *
  * Description: the program check for n value.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
