@@ -20,6 +20,7 @@ int main(void)
  *
  * Return: string of character.
  */
+
 void print_alphabet(void)
 {
 	char c;
