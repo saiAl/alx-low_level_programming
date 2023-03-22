@@ -2,7 +2,7 @@
 
 /**
  * _abs - function return tha absolute value
- *
+ * @n: parameter for the number given.
  * Return: Always n.
  */
 
@@ -12,7 +12,7 @@ int _abs(int n)
 	{
 		return (n);
 	}
-	else 
+	else
 	{
 		return (n * -1);
 	}
