@@ -5,12 +5,18 @@
  *
  * @n: parameter for a the number given.
  *
- * Return: Always 0.
+ * Return: Always n.
  */
 
 int print_last_digit(int n)
 {
-	n = n % 10;
-	_putchar(n);
-	return (n);
+	if (n >= 0 && n <= 9)
+	{
+		return (n);
+	}
+	else
+	{
+		n = _abs(n % 10);
+		return (n);
+	}
 }
