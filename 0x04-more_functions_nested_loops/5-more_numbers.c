@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
+ * more_numbers - function print digit.
  *
- *
- *
+ * Return: Always 0.
  */
 
 void more_numbers(void)
