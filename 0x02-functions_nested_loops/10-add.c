@@ -3,7 +3,7 @@
 /**
  * add - function add two numbers.
  * @n: parameter for 1st num.
- * @m parameter for 2nd num.
+ * @m: parameter for 2nd num.
  * Return: sum of the two numbers.
  */
 
