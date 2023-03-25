@@ -2,8 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
- *
+/**
  * main - Entry point.
  *
  * Description: the program check for n value.
