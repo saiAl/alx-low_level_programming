@@ -18,6 +18,12 @@ int print_last_digit(int n)
 		_putchar(last + '0');
 		return (last);
 	}
+	else if (n == INT_MIN)
+	{
+		last = -(n % 10);
+		_putchar(last + '0');
+		return (last);
+	}
 	else
 	{
 		n = n * -1;
