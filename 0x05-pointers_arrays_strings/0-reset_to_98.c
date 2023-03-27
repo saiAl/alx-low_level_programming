@@ -8,10 +8,5 @@
 
 void reset_to_98(int *n)
 {
-	int number;
-	
-	number = 98;
-	n = &number;
-
-	_putchar(number + '0');
+	_putchar(*n + '0');
 }
