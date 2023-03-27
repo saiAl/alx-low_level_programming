@@ -2,6 +2,16 @@
 
 /**
  * reset_to_98 - function update the value that point to
- * @*n: parameter.
+ * @n: parameter.
  * Return: Alaways 0.
  */
+
+void reset_to_98(int *n)
+{
+	int number;
+
+	number = 98;
+	n = &number;
+
+	printf("%d\n", *n);
+}
