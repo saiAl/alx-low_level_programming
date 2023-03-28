@@ -8,7 +8,6 @@
 void print_rev(char *s)
 {
 	int i;
-	int j;
 	int length;
 
 	length = 0;
@@ -18,8 +17,8 @@ void print_rev(char *s)
 		length++;
 	}
 
-	for (j = i - 1; length >= 0; j--)
+	for (; length - 1 >= 0; length--)
 	{
-		_putchar(*s);
+		_putchar(s[length - 1]);
 	}
 }
