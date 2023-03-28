@@ -19,7 +19,7 @@ void rev_string(char *s)
 
 	for (; length - 1 >= 0; length--)
 	{
-		s[length - 1];
+		_pitchar(s[length - 1]);
 	}
 
 }
