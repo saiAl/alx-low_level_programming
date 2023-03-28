@@ -9,7 +9,7 @@
 void rev_string(char *s)
 {
 	int length;
-	char temporary;
+	char temp;
 	char *start;
 	char *end;
 
@@ -24,7 +24,7 @@ void rev_string(char *s)
 
 	while (start < end)
 	{
-		temporary = *start;
+		temp = *start;
 		*start = *end;
 		*end = *start;
 		start++;
