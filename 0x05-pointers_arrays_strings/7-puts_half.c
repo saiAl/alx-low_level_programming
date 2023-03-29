@@ -1,5 +1,5 @@
 #include "main.h"
-#include "string.h"
+iiiiiiiiiii/#include "string.h"
 
 /**
  * puts_half - function that print second half of string.
@@ -7,7 +7,7 @@
  * Return: Always 0.
  */
 
-void put_half(*str)
+void put_half(char *str)
 {
 	int length;
 	int half;
