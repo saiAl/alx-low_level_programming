@@ -2,9 +2,10 @@
 #include <string.h>
 
 /**
- * strncpy - functioncopy string
+ * _strncpy - functioncopy string
  * @dest: param
  * @src: param
+ * @n: param
  * Return: copied string (dest)
  */
 
@@ -15,7 +16,7 @@ char *_strncpy(char *dest, char *src, int n)
 
 	src_len = strlen(src);
 
-	while (i <= src_len && i < n)
+	while (i < src_len && i < n)
 	{
 		dest[i] = src[i];
 		i++;
