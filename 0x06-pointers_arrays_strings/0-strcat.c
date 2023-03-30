@@ -18,10 +18,12 @@ char *_strcat(char *dest, char *src)
 	srclen = strlen(src);
 
 	i = 0;
-	while (i <= strclen)
+	while (i <= srclen)
 	{
 		dest[destlen + i] = src[i];
 		i++;
 	}
+	return (dest);
+
 
 }
