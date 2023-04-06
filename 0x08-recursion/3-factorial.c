@@ -2,6 +2,7 @@
 /**
  * factorial - return the factorial for an int
  * @n: param
+ * Return: factorial for n
  */
 
 int factorial(int n)
@@ -12,5 +13,5 @@ int factorial(int n)
 		return (-1);
 	}
 
-	return n * factorial(n - 1);
+	return (n * factorial(n - 1));
 }
