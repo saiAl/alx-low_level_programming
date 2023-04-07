@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * mian - Entry point
+ * main - Entry point
  * @argc: count
  * @argv: array of args
  * Return: Always 0
