@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
  * main - Entry point
@@ -10,6 +9,6 @@
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	printf("%s\n", argv[0]);
+	printf("%s\n", *argv);
 	return (0);
 }
