@@ -1,4 +1,4 @@
-#include "mian.h"
+#include "main.h"
 
 /**
  * Create_array - function that create an array using malloc.
