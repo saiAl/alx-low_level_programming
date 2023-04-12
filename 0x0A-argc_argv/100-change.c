@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
 	int arr[] = {25, 10, 5, 2, 1};
 
 	coin = 0;
+	count = 0;
 
 	if (argc == 2)
 	{
