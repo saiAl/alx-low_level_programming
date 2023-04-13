@@ -6,13 +6,14 @@
  * string_nconcat - concat strings
  * @s1: 1st string
  * @s2: 2nd string
+ * @n: bytes
  * Return: ptr.
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
-	unsigned i;
+	unsigned  int i;
 	unsigned int j;
 	unsigned int len1;
 	unsigned int len2;
@@ -38,7 +39,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	for (j = 0; j < n; j++)
 		ptr[len1 + j] = s2[j];
 
-	ptr[len1 + n + 1] = '\0';
+	ptr[len1 + n] = '\0';
 
 	if (ptr == NULL)
 		return (NULL);
