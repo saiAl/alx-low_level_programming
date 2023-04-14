@@ -7,7 +7,6 @@
 
 int main()
 {
-	int i;
 	int mul;
 	int num;
 
