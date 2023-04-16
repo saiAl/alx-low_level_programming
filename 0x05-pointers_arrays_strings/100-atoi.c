@@ -33,7 +33,6 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	
 	if (sign == -1)
 	{
 		res *= sign;
