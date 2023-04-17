@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
- *
+ * print_dog - function that print struct
+ * @d: param holds the struct
+ * description: print element from dog struct
+ * Return: void
  */
 
 void print_dog(struct dog *d)
@@ -46,5 +46,4 @@ void print_dog(struct dog *d)
 		}
 	}
 
-	
 }
