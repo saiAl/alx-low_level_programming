@@ -35,6 +35,6 @@ int loop_through_string(char *str, int start, int end)
 	if (str[start] != str[end])
 		return (0);
 	if (start < end + 1)
-		return (loop_through_staring(str, start + 1, end - 1));
+		return (loop_through_string(str, start + 1, end - 1));
 	return (1);
 }
