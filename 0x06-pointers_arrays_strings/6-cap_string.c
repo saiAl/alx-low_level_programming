@@ -34,7 +34,9 @@ char *cap_string(char *s)
  */
 int check(char c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
+
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ||
+			(c >= '0' && c <= '9'))
 		return (1);
 	else
 		return (0);
