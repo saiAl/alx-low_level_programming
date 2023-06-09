@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		cents = change(atoi(argv[1]));
-		printf("cents: %d\n", cents);
+		printf("%d\n", cents);
 	}
 
 	return (cents);
