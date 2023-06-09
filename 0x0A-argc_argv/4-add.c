@@ -15,12 +15,12 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-
+		/*
 		if (atoi(argv[i]) < 0)
 		{
 			value = 1;
 			break;
-		}
+		}*/
 
 		if (atoi(argv[i]))
 		{
