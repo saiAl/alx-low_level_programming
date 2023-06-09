@@ -15,11 +15,6 @@ int main(int argc, char *argv[])
 
 	while (i < argc)
 	{
-		if (argc == 1)
-		{
-			sum = 0;
-			break;
-		}
 
 		if (atoi(argv[i]) < 0)
 		{
