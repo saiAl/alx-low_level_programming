@@ -15,7 +15,7 @@ int main(void)
 
 	next = n1 + n2;
 
-	printf("%u, %u, ", n1, n2);
+	printf("%u, %u, %u, ", n1, n2, next);
 
 	for (i = 3; i <= 98; i++)
 	{
