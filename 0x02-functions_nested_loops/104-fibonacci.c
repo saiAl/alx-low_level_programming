@@ -14,15 +14,14 @@ int main(void)
 	n2 = 2;
 
 	next = n1 + n2;
-
 	printf("%lu, %lu, %lu, ", n1, n2, next);
 
-	for (i = 0; i <= 81; i++)
+	for (i = 4; i <= 98; i++)
 	{
 		n1 = n2;
 		n2 = next;
 		next = n1 + n2;
-		if (i < 81)
+		if (i < 98)
 			printf("%lu, ", next);
 		else
 			printf("%lu \n", next);
