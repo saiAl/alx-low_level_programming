@@ -17,12 +17,12 @@ int main(void)
 
 	printf("%lu, %lu, %lu, ", n1, n2, next);
 
-	for (i = 14; i <= 98; i++)
+	for (i = 0; i <= 81; i++)
 	{
 		n1 = n2;
 		n2 = next;
 		next = n1 + n2;
-		if (i < 98)
+		if (i < 81)
 			printf("%lu, ", next);
 		else
 			printf("%lu \n", next);
