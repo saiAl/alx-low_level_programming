@@ -1,6 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
-
+#include <stdio.h>
 /**
  * array_range - function that create an array of integers
  * @min: minimum integer
@@ -16,8 +16,8 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	for (size = 0; min <= max; size++)
-		min++;
+	for (i = min; i <= max; i++)
+		++size;
 
 	array = malloc(sizeof(int) * size);
 
@@ -31,8 +31,5 @@ int *array_range(int min, int max)
 			i++;
 		}
 	}
-	else
-		return (NULL);
-
 	return (array);
 }
