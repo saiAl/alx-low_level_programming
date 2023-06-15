@@ -4,9 +4,11 @@
 
 
 /**
- *
- *
- *
+ * string_nconcat - function concatenate two string
+ * @s1: first string
+ * @s2: second string
+ * @n: bytes to concatenate
+ * Return: new string, NULL on falure
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -35,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			new_str[j] = s2[i];
 			j++;
 		}
-		new_str[j] = '\0'; 
+		new_str[j] = '\0';
 	}
 	else
 		return (NULL);
