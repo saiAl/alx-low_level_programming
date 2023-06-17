@@ -9,13 +9,13 @@ int main(void)
 {
 	int i;
 
-	long double n1, n2, next;
+	long unsigned int n1, n2, next;
 
 	n1 = 1;
 	n2 = 2;
 
 	next = n1 + n2;
-	printf("%.0lf, %.0lf, %.0lf, ", n1, n2, next);
+	printf("%.0lu, %.0lu, %.0lu, ", n1, n2, next);
 
 	for (i = 4; i <= 98; i++)
 	{
@@ -23,9 +23,9 @@ int main(void)
 		n2 = next;
 		next = n1 + n2;
 		if (i < 98)
-			printf("%.0lf, ", next);
+			printf("%.0lu, ", next);
 		else
-			printf("%.0lf \n", next);
+			printf("%.0lu \n", next);
 	}
 
 	return (0);
