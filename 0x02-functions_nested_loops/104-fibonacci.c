@@ -8,13 +8,14 @@
 int main(void)
 {
 	int i;
-	unsigned long int n1, n2, next;
+
+	long double n1, n2, next;
 
 	n1 = 1;
 	n2 = 2;
 
 	next = n1 + n2;
-	printf("%lu, %lu, %lu, ", n1, n2, next);
+	printf("%.0LF, %.0LF, %.0LF, ", n1, n2, next);
 
 	for (i = 4; i <= 98; i++)
 	{
@@ -22,9 +23,9 @@ int main(void)
 		n2 = next;
 		next = n1 + n2;
 		if (i < 98)
-			printf("%lu, ", next);
+			printf("%.0LF, ", next);
 		else
-			printf("%lu \n", next);
+			printf("%.0LF \n", next);
 	}
 
 	return (0);
