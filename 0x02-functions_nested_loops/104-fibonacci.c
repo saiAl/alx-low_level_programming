@@ -9,7 +9,7 @@ int main(void)
 {
 	int i;
 
-	long unsigned int n1, n2, next;
+	unsigned long int n1, n2, next;
 
 	n1 = 1;
 	n2 = 2;
