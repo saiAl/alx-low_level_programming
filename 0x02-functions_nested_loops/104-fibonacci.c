@@ -15,7 +15,7 @@ int main(void)
 	n2 = 2;
 
 	next = n1 + n2;
-	printf("%.0LF, %.0LF, %.0LF, ", n1, n2, next);
+	printf("%.0lf, %.0lf, %.0lf, ", n1, n2, next);
 
 	for (i = 4; i <= 98; i++)
 	{
@@ -23,9 +23,9 @@ int main(void)
 		n2 = next;
 		next = n1 + n2;
 		if (i < 98)
-			printf("%.0LF, ", next);
+			printf("%.0lf, ", next);
 		else
-			printf("%.0LF \n", next);
+			printf("%.0lf \n", next);
 	}
 
 	return (0);
