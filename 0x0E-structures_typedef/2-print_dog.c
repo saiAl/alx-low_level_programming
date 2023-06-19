@@ -13,8 +13,8 @@ void print_dog(struct dog *d)
 	float age;
 	char *owner;
 
-	if (d == NULL)
-		printf("(nil)");
+	if (!d)
+		printf("");
 
 	name = d->name;
 
