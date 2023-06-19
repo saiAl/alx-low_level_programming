@@ -14,7 +14,7 @@ void print_dog(struct dog *d)
 	char *owner;
 
 	if (!d)
-		printf("");
+		printf(" ");
 
 	name = d->name;
 
