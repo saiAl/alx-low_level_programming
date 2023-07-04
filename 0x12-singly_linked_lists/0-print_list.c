@@ -2,9 +2,9 @@
 #include <stdio.h>
 
 /**
- *
- *
- *
+ * print_list - function that print all elements in a list
+ * @h: a node
+ * Return: the numbers of elements
  */
 
 size_t print_list(const list_t *h)
@@ -20,6 +20,6 @@ size_t print_list(const list_t *h)
 		count++;
 		h = h->next;
 	}
-	
+
 	return (count);
 }
