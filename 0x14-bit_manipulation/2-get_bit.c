@@ -18,7 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	s = malloc(sizeof(char) * 32);
 	s = binary(n);
 
-	if (index >= 32 || index == NULL)
+	if (index >= 32 || !n )
 		return (-1);
 	
 	if (index == 0)
