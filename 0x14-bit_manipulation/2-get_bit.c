@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 char *binary(unsigned long int n);
@@ -19,8 +18,9 @@ int get_bit(unsigned long int n, unsigned int index)
 	s = malloc(sizeof(char) * 32);
 	s = binary(n);
 
-	if (index >= 32)
+	if (index >= 32 || index == NULL)
 		return (-1);
+	
 	if (index == 0)
 		return (0);
 
