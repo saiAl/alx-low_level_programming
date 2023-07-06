@@ -2,9 +2,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-
-int _pow(int base, int exp);
-
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
  * @b: the binary number
@@ -13,45 +10,21 @@ int _pow(int base, int exp);
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i, n, j;
-	int len, rem, decimal = 0;
+	int i;
+	unsigned int len, pow = 1, res = 0;
 
 	if (b == NULL)
-		return (-1);
+		return (0);
 
 	len = strlen(b);
-	for (i = 0; i < len; i++)
-		if (b[i] != '0' && b[i] != '1')
-		{
-			return (0);
-		}
-
-	n = atoi(b);
-	j = 0;
-	while (n != 0)
+	for (i = (len - 1); i >= 0; i--)
 	{
-		rem = n % 10;
-		n /= 10;
-		decimal += rem * _pow(2, j);
-		++j;
+		if (b[i] == '1')
+			res += pow;
+		else if (b[i] != '0')
+			return (0);
+		pow <<= 1;
 	}
-
-	return (decimal);
-}
-
-/**
- * _pow - function that raised base to power of exp
- * @base: the base number
- * @exp: the raised power
- * Return: res on success
- */
-
-int _pow(int base, int exp)
-{
-	int i, res = 1;
-
-	for (i = 0; i < exp; i++)
-		res *= base;
 
 	return (res);
 }
