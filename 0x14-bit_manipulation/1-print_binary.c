@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 #define ONE 1
 #define ZERO 0
@@ -11,16 +12,25 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned long int i;
-	int bits;
+	int i, bits = 0;
+	unsigned long int m;
 
-	if (n <= 9)
-		bits = 1;
-	else if (n <= 99)
-		bits = 7;
+	m = n;
+	while (m > 0)
+	{
+		m = m >> 1;
+		bits++;
+	}
+
+	if (n == 0)
+		_putchar(ZERO + '0');
 	else
-		bits = 11;
-
-	for (i = 1UL << (bits - ONE); i > ZERO; i >>= ONE)
-		(n & i) ? _putchar(ONE + '0') : _putchar(ZERO + '0');
+		for (i = bits - 1; i >= 0; i--)
+		{
+			m = 1 << i;
+			if (n & m)
+				_putchar(ONE + '0');
+			else
+				_putchar(ZERO + '0');
+		}
 }
