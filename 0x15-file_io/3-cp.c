@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define BUF 1024
+#define BUFFER 1024
 
 /**
  * main - Entry point
@@ -16,7 +16,8 @@
 int main(int argc, char *argv[])
 {
 	int from_fd, to_fd;
-	ssize_t buff[BUF];
+	ssize_t r_bytes, w_bytes;
+	char buffer[BUFFER];
 
 	if (argc != 3)
 	{
@@ -25,14 +26,7 @@ int main(int argc, char *argv[])
 	}
 
 	from_fd = open(argv[1], O_RDONLY);
-
 	if (from_fd == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-
-	if ((read(from_fd, buff, BUF)) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
@@ -48,10 +42,31 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((write(to_fd, buff, BUF)) == -1)
+
+	while (r_read > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
-		exit(99);
+		r_bytes = read(from_fd, buffer, BUFFER); 
+		
+		if (r_bytes == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+
+		if (r_bytes > 0)
+		{
+			w_bytes = write(to_fd, buffer, r_bytes); 
+			while (w_bytes != r_bytes)
+			{
+				if (w_bytes == -1)
+				{
+					dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
+					exit(99);
+				}
+				w_bytes += write(to_fd, buffer + w_bytes, r_bytes - w_bytes);
+			}
+		}
+
 	}
 	if (close(from_fd) == -1)
 	{
