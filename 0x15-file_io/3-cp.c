@@ -5,7 +5,6 @@
 #include <stdlib.h>
 
 #define BUF 1024
-void _close(int f);
 
 /**
  * main - Entry point
@@ -54,24 +53,15 @@ int main(int argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n", argv[2]);
 		exit(99);
 	}
-	_close(from_fd);
-	_close(to_fd);
-
-	return (0);
-}
-
-/**
- * _close - function to close the files.
- * @f: parameters.
- */
-void _close(int f)
-{
-	int n;
-
-	n = close(f);
-	if (n == -1)
+	if (close(from_fd) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f);
 		exit(100);
 	}
+	if (close(from_fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f);
+		exit(100);
+	}
+	return (0);
 }
