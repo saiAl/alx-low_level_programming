@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to");
 		exit(100);
-	}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
+	}
 
 	from_fd = open(argv[1], O_RDONLY);
 	if (from_fd == -1)
