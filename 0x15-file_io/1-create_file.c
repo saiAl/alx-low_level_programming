@@ -19,7 +19,7 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_CREAT | O_TRUNC | O_APPEND, S_IRUSR | S_IWUSR);
 	
 	if (fd == -1)
-		rcreate_file("_file_0", "Best School !")eturn (-1);
+		return (-1);
 
 	if (text_content)
 		write(fd, text_content, 2);
