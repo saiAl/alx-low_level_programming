@@ -18,7 +18,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename)
 		return (0);
 
-	fd = open(filename, O_RDONLY, S_IRUSR);
+	fd = open(filename, O_RDONLY);
 
 	if (fd == -1)
 		return (0);
@@ -29,6 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	write(STDOUT_FILENO, buff, bytes);
 
+	close(fd);
 	free(buff);
 	return (bytes);
 }
