@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	int from_fd, to_fd;
 	ssize_t buff[BUF];
 
-	if (argc < 3)
+	if (argc != 3)
 	{
 		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to");
 		exit(100);
