@@ -2,7 +2,7 @@
 
 /**
  * sum_listint - function that sum all data in linked list
- * head: node
+ * @head: node
  * Return: sum of data
  */
 
