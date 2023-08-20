@@ -9,25 +9,31 @@
  * Return: node on success, NULL on failure
  */
 
+
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *new, *ptr;
-	unsigned int i = 0;
+	listint_t *new, *ptr, *current;
+	unsigned int length = 0;
+	int data;
 
 	new = malloc(sizeof(listint_t));
 	if (!new)
 		return (NULL);
 
+
 	ptr = *head;
+	current = *head;
 
 	while (ptr != NULL)
 	{
-		i++;
+		length++;
+		if (length == idx)
+			data = ptr->n;
 		ptr = ptr->next;
 	}
 
-	if (idx > i)
-		return (NULL);
+	while (current->n != data)
+		current = current->next;
 
 	new->n = n;
 	if (idx == 0)
@@ -35,7 +41,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		new->next = *head;
 		*head = new;
 	}
-
+	else
+	{
+		new->next = current->next;
+		current->next = new;
+	}
 
 	return (new);
 }
