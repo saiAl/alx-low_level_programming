@@ -21,8 +21,6 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	new = ht->array[index];
 	if (ht->array[index] == NULL || new->value == NULL)
 		return (NULL);
-	if (new->next)
-		return new->next->value;
 
-	return new->value;
+	return (new->value);
 }
