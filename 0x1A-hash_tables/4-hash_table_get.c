@@ -12,6 +12,9 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	unsigned int index;
 	hash_node_t *new;
 
+	if (!ht)
+		return (NULL);
+
 	index = key_index((unsigned char *)key, ht->size);
 
 	new = (hash_node_t *)malloc(sizeof(hash_node_t *));
