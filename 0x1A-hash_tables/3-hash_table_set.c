@@ -25,7 +25,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->next = NULL;
 
 	index = key_index((unsigned char *)key, ht->size);
-
+	
+	while (i < ht->size)
+	{
+		if (strcmp(ht->array[i], key) == 0)
+		{
+			ht->array[i]->value = value;
+			break;
+		}
+		i++;
+	}
 	if (!ht->array[index])
 		ht->array[index] = new;
 	else
