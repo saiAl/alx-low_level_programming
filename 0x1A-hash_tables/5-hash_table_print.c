@@ -1,4 +1,5 @@
 #include "hash_tables.h"
+#include <stdio.h>
 
 /**
  * hash_table_print - function that print hash tables
@@ -8,23 +9,49 @@
 
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned int i = 0, count = 0;
+	unsigned long int i;
+	int count;
+	hash_node_t *p;
 
-	for (i = 0; i < ht->size; i++)
-		if (ht->array[i] != NULL)
-			count++;
 
+	count = size(ht);
 	printf("{");
-	for (i = 0; i < ht->size; i++)
-		if (ht->array[i] != NULL)
+	for (i = 0; ht && i < ht->size; i++)
+	{
+		p = ht->array[i];
+		while (p)
 		{
+			count--;
 			if (count > 0)
-			{
-				printf("\'%s\': \'%s\', ", ht->array[i]->key, ht->array[i]->value);
-				count--;
-			}
-			if (count == 0)
-				printf("\'%s\': \'%s\'", ht->array[i]->key, ht->array[i]->value);
+				printf("'%s': '%s', ", p->key, p->value);
+			else if (count == 0)
+				printf("'%s': '%s'", p->key, p->value);
+			p = p->next;
 		}
+	}
 	printf("}\n");
+}
+
+/**
+ * size - get the number of nodes in hash tables
+ * @ht: hash table
+ * Return: number of nodes
+ */
+
+int size(const hash_table_t *ht)
+{
+	unsigned long int i;
+	hash_node_t *n;
+	int count = 0;
+
+	for (i = 0; ht && i < ht->size; i++)
+	{
+		n = ht->array[i];
+		while (n)
+		{
+			count++;
+			n = n->next;
+		}
+	}
+	return (count);
 }
