@@ -1,6 +1,8 @@
 #include "hash_tables.h"
 #include <stdio.h>
 
+int size(const hash_table_t *ht);
+
 /**
  * hash_table_print - function that print hash tables
  * @ht: hash table
