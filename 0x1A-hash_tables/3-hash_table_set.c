@@ -28,12 +28,18 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new->next = NULL;
 
 	index = key_index((unsigned char *)key, ht->size);
+
 	if (!ht->array[index])
 		ht->array[index] = new;
 	else
 	{
-		new->next = ht->array[index];
-		ht->array[index] = new;
+		if (strcmp(ht->array[index]->key, new->key) == 0)
+			ht->array[index]->value = strdup(new->value);
+		else
+		{
+			new->next = ht->array[index];
+			ht->array[index] = new;
+		}
 	}
 
 	return (1);
