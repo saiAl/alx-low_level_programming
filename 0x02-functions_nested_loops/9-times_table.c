@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * times_table - function that print 9 table
@@ -24,22 +23,22 @@ void times_table(void)
 
 			if (m == 0)
 			{
-				putchar(res + '0');
-				putchar(',');
+				_putchar(res + '0');
+				_putchar(',');
 				continue;
 			}
-			putchar(' ');
+			_putchar(' ');
 			if (second > 0)
-				putchar(second + '0');
+				_putchar(second + '0');
 			else
-				putchar(' ');
+				_putchar(' ');
 
-			putchar(last + '0');
+			_putchar(last + '0');
 
 			if (m != 9)
-				putchar(',');
+				_putchar(',');
 		}
-		putchar('\n');
+		_putchar('\n');
 		n++;
 	}
 }
