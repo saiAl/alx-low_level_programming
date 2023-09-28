@@ -11,7 +11,7 @@ char *leet(char *s)
 	int i;
 	char *new;
 	char letters[] = {'a', 'e', 'o', 't', 'l'};
-	int numbers[] = {7, 3, 0, 7, 1};
+	int numbers[] = {4, 3, 0, 7, 1};
 
 	new = s;
 	while (*s)
