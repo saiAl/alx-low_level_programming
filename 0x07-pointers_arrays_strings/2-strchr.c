@@ -29,9 +29,9 @@ char *_strchr(char *s, char c)
 		i++;
 		j++;
 	}
+	word[j] = '\0';
 
-	if (strlen(word) == 0)
-		return ("nil");
-
+	if (*word == '\0')
+		return (NULL);
 	return (word);
 }
