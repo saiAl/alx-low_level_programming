@@ -12,21 +12,26 @@
 char *_strchr(char *s, char c)
 {
 	int i, j;
-	char *letter;
+	char *word;
 
-	letter = malloc(sizeof(char) * strlen(s));
+	word = (char *)malloc(sizeof(char *) * strlen(s));
+	if (!word)
+		return (NULL);
 
-	i = 0;
+	for (i = 0; s[i] != '\0'; i++)
+		if (s[i] == c)
+			break;
+
 	j = 0;
 	while (s[i] != '\0')
 	{
-		if (c == s[i])
-		{
-			letter[j] = s[i];
-			j++;
-		}
+		word[j] = s[i];
 		i++;
+		j++;
 	}
-	letter[j] = '\0';
-	return (letter);
+
+	if (strlen(word) == 0)
+		return ("nil");
+
+	return (word);
 }
