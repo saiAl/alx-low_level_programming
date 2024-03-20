@@ -1,6 +1,4 @@
-CC = gcc
-
 all: school
 
-school: school.c
-	${CC} -c $< -o $@
+school: main.c school.c
+	gcc $^ -o $@
