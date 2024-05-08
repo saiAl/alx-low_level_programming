@@ -20,6 +20,9 @@ int binary_search(int *array, size_t size, int value)
 	end = size - 1;
 	start = 0;
 
+	if (array == NULL || size == 0)
+		return (-1);
+
 	_print(0, end, array);
 	while (end >= start)
 	{
